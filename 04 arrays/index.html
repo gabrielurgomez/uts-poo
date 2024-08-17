@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        //correcto, siempre del mismo tipo
+        let frutas = ["manzana", "pera", "uva", "sandia", "melon"];
+
+        //correct solo numeros
+        let numeros = [5, 3.1416, 8, 9, 10];
+
+        //correcto, solo booleanos
+        let booleanos = [true, false, true, false, true];
+
+        //incorrecto
+        let cosas = ["manzana", 5, true, 3.1416, "pera", "uva", "sandia", "melon"];
+
+        let countries = ["Mexico", "USA", "Canada", "Brasil", "Argentina", "Venezuela"];
+        //access to index 2
+        let myfavoriteCountry = countries[2];
+        //console.log(countries);
+
+        let numbers = [8, 4, 3, 4, 6, 12, 7, 2, 9, 3];
+
+        //amount of elements in the array
+        let cantNumbers = numbers.length;
+
+        //add a new element to the array
+        numbers.push(10);
+
+        //modify the index 5 of the aray to be 10
+        numbers[5] = 10;
+
+        //delete the last element of the array
+        numbers.pop();
+
+        //find returns the value if exist, if not, returns undefined
+        let numero = numbers.find(el => el === 2);
+        //console.log(numero);
+
+        //indexOf returns the index of the element if exist, if not, returns -1
+        let index = numbers.indexOf(2);
+
+
+
+
+
+        let numeroMayor = 0
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] > numeroMayor) {
+                numeroMayor = numbers[i];
+            }
+        }
+        //console.log(numeroMayor);
+
+        /*for (let i = 0; i < numbers.length; i++) {
+            console.log(countries[i]);
+        }*/
+
+        let paises1 = ["Mexico", "USA", "Canada", "Brasil", "Argentina", "Venezuela"];
+        let paises2 = ["Colombia", "Venezuela", "Peru", "Ecuador", "Mexico", "Canada"];
+
+        let arrayRespuesta = [];
+        //iterate paises 2
+        for (let i = 0; i < paises2.length; i++) {
+            let posicion = paises1.indexOf(paises2[i])
+            arrayRespuesta.push(posicion);
+        }
+
+        console.log(arrayRespuesta);
+
+        //[-1, 5, -1, -1, 0, 2]
+
+
+
+
+    </script>
+</head>
+
+
+</html>>
