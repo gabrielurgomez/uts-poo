@@ -21,7 +21,15 @@
         let myfavoriteCountry = countries[2];
         //console.log(countries);
 
-        let numbers = [8, 4, 3, 4, 6, 12, 7, 2, 9, 3];
+        let numbers = [8, 4, 3, 4, 9, 12, 7, 2, 9, 3];
+        let arrayrta = numbers.map((el, index) => {
+            if (el == 9) {
+                return el * 2;
+            } else {
+                return el;
+            }
+        });
+        console.log(arrayrta);
 
         //amount of elements in the array
         let cantNumbers = numbers.length;
@@ -35,16 +43,34 @@
         //delete the last element of the array
         numbers.pop();
 
+
+        //numbers.splice(1, 2);        
+        //numbers.splice(1)
+        //console.log(numbers); --q
+        let arrayNuevo = []
+        numbers.forEach((el, index) => {
+            arrayNuevo.push(el * 2)
+        });
+        console.log(arrayNuevo);
+
+        /*let arrayNuevo = numbers.map((el, index) => {
+            return el * 2;
+        });
+        console.log(arrayNuevo);*/
+
+        let animales = ["perro", "gato", "pez", "conejo", "tortuga", "loro", "elefante", "jirafa", "cocodrilo", "tigre"];
+        let animalesMayuscula = animales.map((el, index) => {
+            return el.toUpperCase();
+        });
+        console.log(animalesMayuscula);
+
+
         //find returns the value if exist, if not, returns undefined
         let numero = numbers.find(el => el === 2);
         //console.log(numero);
 
         //indexOf returns the index of the element if exist, if not, returns -1
         let index = numbers.indexOf(2);
-
-
-
-
 
         let numeroMayor = 0
         for (let i = 0; i < numbers.length; i++) {
@@ -61,6 +87,8 @@
         let paises1 = ["Mexico", "USA", "Canada", "Brasil", "Argentina", "Venezuela"];
         let paises2 = ["Colombia", "Venezuela", "Peru", "Ecuador", "Mexico", "Canada"];
 
+        let paisFavorito = paises1[3]
+
         let arrayRespuesta = [];
         //iterate paises 2
         for (let i = 0; i < paises2.length; i++) {
@@ -68,9 +96,19 @@
             arrayRespuesta.push(posicion);
         }
 
-        console.log(arrayRespuesta);
+        //console.log(arrayRespuesta);
 
         //[-1, 5, -1, -1, 0, 2]
+
+        let numeros1 = [1, 2, 3, 8, 5, 6, 2, 8, 3, 10];
+        let numerosSinRepetir = []; //=> [1, 2, 3, 8, 5, 6, 10]
+        let numerosRepetidos = []; //=> [2, 8, 3]
+
+        numeros1.forEach((el, index) => {
+
+        });
+     
+
 
 
 

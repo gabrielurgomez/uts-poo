@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let libros = [
+            {
+                titulo: "El señor de los anillos",
+                autor: "J.R.R. Tolkien",
+                paginas: 1200,
+                leido: true
+            },
+            {
+                titulo: "Harry Potter",
+                autor: "J.K. Rowling",
+                paginas: 800,
+                leido: false
+            },
+            {
+                titulo: "Cien años de soledad",
+                autor: "Gabriel García Márquez",
+                paginas: 500,
+                leido: true
+            },
+            {
+                titulo: "Don Quijote de la Mancha",
+                autor: "Miguel de Cervantes",
+                paginas: 850,
+                leido: false
+            }
+        ]
+
+        let titulos = []
+        libros.forEach((libro, index) => {
+            if (libro.paginas > 600) {
+                titulos.push(libro.titulo)
+            }
+        });
+
+        console.log(titulos);
+
+    </script>
+</head>
+
+
+</html>>
