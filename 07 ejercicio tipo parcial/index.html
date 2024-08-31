@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        let productos = [
+            { codigo: 'P001', nombre: 'Margarina', precio: 4500, existencias: 120 },
+            { codigo: 'P002', nombre: 'Aceite', precio: 5000, existencias: 200 },
+            { codigo: 'P003', nombre: 'Arroz', precio: 3000, existencias: 300 },
+            { codigo: 'P004', nombre: 'Panela', precio: 2500, existencias: 150 },
+            { codigo: 'P005', nombre: 'Café', precio: 5000, existencias: 100 },
+            { codigo: 'P006', nombre: 'Chocolate', precio: 4500, existencias: 80 },
+            { codigo: 'P007', nombre: 'Leche', precio: 2000, existencias: 50 },
+            { codigo: 'P008', nombre: 'Gaseosa', precio: 2500, existencias: 70 },
+            { codigo: 'P009', nombre: 'Jugo', precio: 3000, existencias: 90 },
+            { codigo: 'P010', nombre: 'Galletas', precio: 1500, existencias: 200 }
+        ]
+
+        let productoBuscar = 'P005'
+
+        //Sume el total de todos los productos e imprima en consola el resultado en un objeto de la siguiente manera:
+        //{ existenciasTotales: 340 }
+        let rta = { existenciasTotales: 0 }
+        productos.forEach(el => {
+            rta.existenciasTotales = rta.existenciasTotales + el.existencias
+        })
+        //console.log(rta)
+
+        let ProductoEncontrado = productos.find(el => el.codigo === productoBuscar);
+        if (ProductoEncontrado === undefined) {
+            console.log('Producto no encontrado')
+        } else {
+            console.log('El nombre es', ProductoEncontrado.nombre)
+        }
+
+    </script>
+</head>
+
+
+</html>>
